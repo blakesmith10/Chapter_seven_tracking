@@ -1,5 +1,6 @@
 package com.bignerdranch.andriod.chapter_two
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -72,6 +73,12 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "binding.nextButton.setOnClickListener")
             quizViewModel.moveToNext()
             updateQuestion()
+        }
+
+        binding.cheatButton.setOnClickListener {
+
+            val intent = Intent(this,CheatActivity::class.java)
+            startActivity(intent)
         }
 
           // quizViewModel.moveToNext()
